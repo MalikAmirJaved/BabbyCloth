@@ -14,14 +14,14 @@ function SideBar({sethambar, hambar}) {
         <div className={`overflow-y-auto h-screen w-2/3 transform transition-transform ease-in-out bg-white ${hambar ? '-translate-x-full duration-700 ' : 'translate-x-0 duration-500 '}`}>
 
             <ul className='space-y-6 font-bold mx-8 my-10'>
-                <li  onClick={()=>{navigate('/home')}} ><div className='flex justify-between items-center'><span>HOME</span></div>
+                <li  onClick={()=>{navigate('/home'); sethambar(prev => !prev)}} ><div className='flex justify-between items-center'><span>HOME</span></div>
                 
                 </li>
                 <li className='flex justify-between items-center'><span>CATALOG</span></li>
                 <li className='flex justify-between items-center'>COLLECTIONS</li>
                 
                 <li className='flex justify-between items-center'><span>SECTIONS ALL</span></li>
-                <li  onClick={()=>{navigate('/contact')}} className='flex justify-between items-center'><span>CONTACT US</span></li>
+                <li  onClick={()=>{navigate('/contact'); sethambar(prev => !prev)}} className='flex justify-between items-center'><span>CONTACT US</span></li>
             </ul>
             <ul  className='space-y-3 font-bold mx-8 my-10'>
                 
